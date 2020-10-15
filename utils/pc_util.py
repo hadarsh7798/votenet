@@ -421,7 +421,7 @@ def write_oriented_bbox(scene_bbox, out_filename):
     
     mesh_list = trimesh.util.concatenate(scene.dump())
     # save to ply file    
-    mesh_list.export(out_filename)
+    trimesh.io.export.export_mesh(mesh_list, out_filename, file_type='ply')
     
     return
 
